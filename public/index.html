@@ -1,56 +1,57 @@
 <!doctype html>
- 
+
 <!-- ESPECIFICANDO NOSSO MÓDULO ANGULAR listaContatos -->
 <html ng-app="gamaBlogApp">
 <head>
-    <!-- META -->
-    <meta charset="utf-8">
-    <!-- Otimizar a exibição em dispositivos móveis -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
- 
-    <title>Moeda Inteligente</title>
- 
-    <!-- CSS -->
-    <!-- Carregando o bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
- 
-    <!-- JS -->
-    <!-- Carregando a biblioteca jQuery -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <!-- Carregando a biblioteca AngularJS -->
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>   
- 
+  <!-- META -->
+  <meta charset="utf-8">
+  <!-- Otimizar a exibição em dispositivos móveis -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src * 'unsafe-inline'; img-src * data:; script-src * 'unsafe-inline' 'unsafe-eval'">
+
+  <title>Moeda Inteligente</title>
+
+  <!-- CSS -->
+  <!-- Carregando o bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- JS -->
+  <!-- Carregando a biblioteca jQuery -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <!-- Carregando a biblioteca AngularJS -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script> 
 </head>
 <!-- DEFINE O CONTROLLER E BUSCA TODOS OS CONTATOS -->
 <body ng-controller="mainController">
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-        	<img src="images/logo.png" class="logo float-left">
-        </a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              	<a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              	<a class="nav-link" href="#">Sobre</a>
-            </li>
-            <li class="nav-item">
-              	<a class="nav-link" href="#">Materiais</a>
-            </li>
-            <li class="nav-item">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" class="logo float-left">
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Materiais</a>
+          </li>
+          <li class="nav-item">
             <!--
-              	<input class="sb-search-input" placeholder="Enter your search term..." type="search" value="" name="search" id="search">
-              	<input class="sb-search-submit" type="submit" value="">
-            -->
-              	<span class="sb-icon-search"></span>
+                <input class="sb-search-input" placeholder="Enter your search term..." type="search" value="" name="search" id="search">
+                <input class="sb-search-submit" type="submit" value="">
+              -->
+              <span class="sb-icon-search"></span>
             </li>
           </ul>
         </div>
@@ -59,55 +60,59 @@
 
     <!-- Page Header -->
     <header class="masthead" style="background-image: url('images/background-home3.jpg')">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-md-8 mx-auto">
-					<div class="site-heading">
-						<h3>Manter o controle dos gastos e conseguir fechar o mês sempre no positivo não é fácil. Por sorte, é possível encontrar diferentes sites e aplicativos que podem te ajudar nesse processo</h3>
-						<h3>O moeda inteligente preparou para você esse e-Book que vai te apresentar:</h3>
-						<div class="row">
-							<div class="col-md-4 col-sm-6">
-				                <div class="service-item">
-				                  	<img src="images/Cartoes_E_Bancos_Digitais.png" alt="Ver promoções" class="img-thumbnail icon-home">
-				                  	<h6>Cartões e Bancos Digitais</h6>
-				                </div>
-				            </div>
-				            <div class="col-md-4 col-sm-6">
-				                <div class="service-item">
-				                  	<img src="images/Controle_Burocratico.png" alt="Ver promoções" class="img-thumbnail icon-home">
-				                  	<h6>Controle Burocrático</h6>
-				                </div>
-				            </div>
-				            <div class="col-md-4 col-sm-6">
-				                <div class="service-item">
-				                  	<img src="images/Controle_De_Gastos.png" alt="Ver promoções" class="img-thumbnail icon-home">
-				                  	<h6>Controle de Gastos</h6>
-				                </div>
-				            </div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-4 mx-auto" style="background-color: #346f7f;">
-					<div class="site-heading">
-						<div class="text-center">
-							<img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15eda1cad39%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15eda1cad39%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2273.640625%22%20y%3D%22104.5%22%3E200x200%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" class="rounded">
-						</div>	
-						<strong class="descriptionEbook"> Baixar agora! Será sua primeira economia, é 100% gratuito! <3</strong>
-						<form class="form">	        
-					        <div class="form-group">
-					          <input type="text" id="nome" class="form-control" placeholder="Nome Completo" ng-model="form.nome"/>        
-					        </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-8 mx-auto">
+            <div class="site-heading">
+              <h3>Manter o controle dos gastos e conseguir fechar o mês sempre no positivo não é fácil. Por sorte, é possível encontrar diferentes sites e aplicativos que podem te ajudar nesse processo</h3>
+              <h3>O moeda inteligente preparou para você esse e-Book que vai te apresentar:</h3>
+              <div class="row">
+                <div class="col-md-4 col-sm-6">
+                  <div class="service-item">
+                    <img src="images/Cartoes_E_Bancos_Digitais.svg" alt="Ver promoções" class="img-thumbnail icon-home">
+                    <h6>Cartões e Bancos Digitais</h6>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="service-item">
+                    <img src="images/Controle_Burocratico.svg" alt="Ver promoções" class="img-thumbnail icon-home">
+                    <h6>Controle Burocrático</h6>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                  <div class="service-item">
+                    <img src="images/Controle_De_Gastos.svg" alt="Ver promoções" class="img-thumbnail icon-home">
+                    <h6>Controle de Gastos</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 mx-auto" style="background-color: #346f7f;">
+            <div class="site-heading">
+              <div class="text-center">
+                <img src="images/capaEbook.png" class="rounded">
+              </div>  
+              <strong class="descriptionEbook"> Baixar agora! Será sua primeira economia, é 100% gratuito! <3</strong>
+              <form class="form" name="formLead" novalidate>          
+                <div class="form-group">
+                  <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome" ng-model="form.nome" required/>        
+                </div>
 
-					        <div class="form-group">
-					          <input type="text" id="email" class="form-control" placeholder="E-mail" ng-model="form.email"/>
-					        </div>    
-					      
-					      	<button class="btn btn-primary" ng-click="criarContato()">Quero Receber!</button>
-					    </form>						
-				    </div>
-			    </div>
-			</div>
-		</div>
+                <div class="form-group">
+                  <input type="text" name="sobrenome" id="sobrenome" class="form-control" placeholder="Sobrenome" ng-model="form.sobrenome" required/>        
+                </div>
+
+                <div class="form-group">
+                  <input type="email" name="email" id="email" class="form-control" placeholder="E-mail" ng-model="form.email" required/>
+                </div>    
+
+                <button class="btn btn-primary" ng-click="criarContato()">Quero Receber!</button>
+              </form>           
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
     <!-- Main Content -->
@@ -127,105 +132,109 @@
             <p class="post-meta">Postado por
               <a href="#">Vic Moura</a>
               em 02 de Outubro, 2017</p>
+            </div>
+            <hr>
+            <div class="post-preview">
+              <a href="post-agora-voce.html">
+                <h2 class="post-title">
+                  Agora você vê: a magia do dinheiro
+                </h2>
+                <h3 class="post-subtitle">Você deixou de sair mais com os amigos, comeu comida barata o mês inteiro e se esforçou muito...maaaas, resistiu bravamente às tentações de gastar até o último centavo do seu salário. </h3>
+              </a>
+              <p class="post-meta">Postado por
+                <a href="#">Lucas Kenji</a>
+                em 02 de Outubro, 2017</p>
+              </div>
+              <hr>
+              <div class="post-preview">
+                <a href="post-4-filmes.html">
+                  <h2 class="post-title">
+                    4 filmes no netflix que vão te inspirar a cuidar melhor de suas finanças
+                  </h2>
+                  <h3 class="post-subtitle">
+                    Os conteúdos disponíveis sobre finanças pessoais estão em todo o lugar, blogs como o Moeda Inteligente, livros, artigos, vídeos, a lista não tem fim, o assunto rende e é complexo em muitos aspectos. 
+                  </h3>
+                </a>
+                <p class="post-meta">Postado por
+                  <a href="#">Izabela Medina</a>
+                  em 02 de outubro, 2017</p>
+                </div>
+                <hr>
+                <!-- Pager -->
+                <div class="clearfix" ng-click="obterIP()">
+                  <a class="btn btn-secondary float-right" >Older Posts &rarr;</a>
+                </div>
+              </div>
+            </div>
           </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post-agora-voce.html">
-              <h2 class="post-title">
-                Agora você vê: a magia do dinheiro
-              </h2>
-              <h3 class="post-subtitle">Você deixou de sair mais com os amigos, comeu comida barata o mês inteiro e se esforçou muito...maaaas, resistiu bravamente às tentações de gastar até o último centavo do seu salário. </h3>
-            </a>
-            <p class="post-meta">Postado por
-              <a href="#">Lucas Kenji</a>
-              em 02 de Outubro, 2017</p>
-          </div>
-          <hr>
-          <div class="post-preview">
-            <a href="post-4-filmes.html">
-              <h2 class="post-title">
-                4 filmes no netflix que vão te inspirar a cuidar melhor de suas finanças
-              </h2>
-              <h3 class="post-subtitle">
-                Os conteúdos disponíveis sobre finanças pessoais estão em todo o lugar, blogs como o Moeda Inteligente, livros, artigos, vídeos, a lista não tem fim, o assunto rende e é complexo em muitos aspectos. 
-              </h3>
-            </a>
-            <p class="post-meta">Postado por
-              <a href="#">Izabela Medina</a>
-              em 02 de outubro, 2017</p>
-          </div>
-          <hr>
-          <!-- Pager -->
-          <div class="clearfix" ng-click="obterIP()">
-            <a class="btn btn-secondary float-right" >Older Posts &rarr;</a>
-          </div>
-        </div>
-      </div>
-    </div>
+          <button class="btn" ng-click="open()">Open me!</button>
+          <!-- Footer -->
+          <footer class="blog-footer">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-2 ">
+                  <div class="service-item">
+                    <img src="images/logo-footer.svg" alt="Ver promoções" class="img-thumbnail icon-home">
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <ul class="list">
+                    <li>
+                      <a href="#">Home</a>
+                    </li>
+                    <li>
+                      <a href="#">Sobre</a>
+                    </li>
+                    <li>
+                      <a href="#">Materiais</a>
+                    </li>
+                  </ul>                 
+                </div>
+                <div class="col-md-3">                  
+                  <ul class="list">
+                    <li>
+                      <a href="#">Busca</a>
+                    </li>
+                    <li>
+                      <a href="#">Entre em contato</a>
+                    </li>
+                    <li class="footer-item">
+                      <a href="#">Redes Sociais</a>
+                    </li>
+                  </ul>                 
+                </div>
+                <div class="col-md-4">
+                  <h5>Quero Receber mais conteúdos</h5>
+                  <form class="form" name="formLead" novalidate>          
+                    <div class="form-group">
+                      <input type="text" name="nome" id="nome" class="form-control" placeholder="Nome" ng-model="form.nome" required/>        
+                    </div>
 
-    <!-- Footer -->
-    <footer class="blog-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-2 ">
-	                <div class="service-item">
-	                  	<img src="images/logo-footer.png" alt="Ver promoções" class="img-thumbnail icon-home">
-	                </div>
-	            </div>
-	            <div class="col-md-2">
-                  	<ul class="list">
-						<li>
-							<a href="#">Home</a>
-						</li>
-						<li>
-							<a href="#">Sobre</a>
-						</li>
-						<li>
-							<a href="#">Materiais</a>
-						</li>
-					</ul>	                
-	            </div>
-	            <div class="col-md-3">	                
-                  	<ul class="list">
-						<li>
-							<a href="#">Busca</a>
-						</li>
-						<li>
-							<a href="#">Entre em contato</a>
-						</li>
-						<li class="footer-item">
-							<a href="#">Redes Sociais</a>
-						</li>
-					</ul>	                
-	            </div>
-	            <div class="col-md-4">
-	            	<h5>Quero Receber mais conteúdos</h5>
-	                <form class="form">	        
-				        <div class="form-group">
-				          <input type="text" id="nome" class="form-control" placeholder="Nome Completo" ng-model="form.nome"/>        
-				        </div>
+                    <div class="form-group">
+                      <input type="text" name="sobrenome" id="sobrenome" class="form-control" placeholder="Sobrenome" ng-model="form.sobrenome" required/>        
+                    </div>
 
-				        <div class="form-group">
-				          <input type="text" id="email" class="form-control" placeholder="E-mail" ng-model="form.email"/>
-				        </div>    
-				      
-				      	<button class="btn btn-primary" ng-click="criarContato()">Quero Receber!</button>
-				    </form>
-	            </div>
-			</div>			
-		</div>
-    </footer>
+                    <div class="form-group">
+                      <input type="email" name="email" id="email" class="form-control" placeholder="E-mail" ng-model="form.email" required/>
+                    </div>    
 
-	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-	<script>
-	   !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-	   (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-	   r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-	   }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+                    <button class="btn btn-primary" ng-click="criarContato()">Quero Receber!</button>
+                  </form> 
+                </div>
+              </div>      
+            </div>
+          </footer>
 
-	   ga('create', 'UA-107388958-1');
-	   ga('send', 'pageview');
-	</script>
-	<script src="angularApp.js"></script>
-</body>
+          <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+          <script>
+           !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+             (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+             r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+           }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+           ga('create', 'UA-107388958-1');
+           ga('send', 'pageview');
+         </script>
+         <script src="angularApp.js"></script>
+    </body>
 </html>

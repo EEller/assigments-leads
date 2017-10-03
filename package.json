@@ -10,7 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "client-address": "^1.0.0",
     "express": "^4.16.1",
+    "ipify": "^2.0.0",
+    "moment": "^2.18.1",
     "mysql": "^2.14.1"
   }
 }
