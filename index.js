@@ -28,16 +28,11 @@ router.get('/contatos', (req, res) =>{
     execSQLQuery('SELECT * FROM Contatos', res);
 });
 router.post('/contatos', (req, res) =>{
-
-	ipify().then(newIp => {
-		console.log(newIp);
-		//=> '82.142.31.236'
-		const nome = req.body.nome.substring(0,150);
-	    const email = req.body.email.substring(0,150);
-	    const ip = newIp.substring(0,20);
-	    const data = req.body.data;
-	    execSQLQuery(`INSERT INTO Contatos(Nome, Email, IP, Data) VALUES('${nome}','${email}','${ip}', '${data}')`, res);
-	});    
+	const nome = req.body.nome.substring(0,150);
+    const email = req.body.email.substring(0,150);
+    const ip = req.body.ip.substring(0,20);
+    const data = req.body.data;
+    execSQLQuery(`INSERT INTO Contatos(Nome, Email, IP, Data) VALUES('${nome}','${email}','${ip}', '${data}')`, res);   
 })
 
 //inicia o servidor
@@ -59,6 +54,5 @@ function execSQLQuery(sqlQry, res){
 		else
 		res.json(results);
 		connection.end();
-		console.log('executou!');
 	});
 }

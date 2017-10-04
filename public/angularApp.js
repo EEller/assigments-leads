@@ -25,15 +25,24 @@ function mainController($scope, $http) {
         }else {
             $scope.form.data = moment().format('YYYY-MM-DD HH:mm:ss');
             $scope.form.nome = $scope.form.nome+ ' ' +$scope.form.sobrenome;
-
-            $http.post('/contatos', $scope.form).success(function(data) {
-                $scope.form.nome = "";
-                $scope.form.sobrenome = "";
-                $scope.form.email = "";
-                alert("Obrigado, vc receberá o seu e-book via email.");
-            })
-            .error(function(data) {
-                console.log('Error: ' + data);
+            $http({
+                method: 'GET',
+                url: '//www.stupidwebtools.com/api/my_ip.json'
+            }).then(function successCallback(response) {
+                $scope.form.ip = response.data.my_ip.ip;
+                $http.post('/contatos', $scope.form).success(function(data) {
+                    $scope.form.nome = "";
+                    $scope.form.sobrenome = "";
+                    $scope.form.email = "";
+                    alert("Obrigado, vc receberá o seu e-book via email.");
+                })
+                .error(function(data) {
+                    console.log('Error: ' + data);
+                });
+            }, function errorCallback(response) {
+                // called asynchronously if an error occurs
+                // or server returns response with an error status.
+                console.log(response);
             });
         }
         
