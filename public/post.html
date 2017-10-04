@@ -6,7 +6,7 @@
 	<!-- Otimizar a exibição em dispositivos móveis -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>8 reações na hora</title>
+	<title>8 reações na hora de pagar a conta</title>
 
 	<!-- CSS -->
 	<!-- Carregando o bootstrap-->
@@ -22,6 +22,15 @@
 </head>
 
 <body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.10&appId=257673200954409";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -118,7 +127,9 @@
         	<img src="https://media.giphy.com/media/KupdfnqWwV7J6/giphy.gif" class="img-thumbnail">
         </div>
 
-        <p>Pra facilitar a vida de vocês e evitar alguns perrengues como os citados acima temos alguns materiais que podem ajudar vocês a terem um controle melhor da vida financeira. Você pode se inscrever abaixo ou aqui(linkar a landing page), e vai receber esse e-book direto no seu e-mail.</p>
+        <p>Pra facilitar a vida de vocês e evitar alguns perrengues como os citados acima temos alguns materiais que podem ajudar vocês a terem um controle melhor da vida financeira. Você pode se inscrever abaixo ou <a href="index.html">aqui</a>, e vai receber esse e-book direto no seu e-mail.</p>
+
+        <div class="fb-share-button" data-href="http://moedainteligente.com.br/post.html" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmoedainteligente.com.br%2Fpost.html&amp;src=sdkpreparse">Compartilhar</a></div>
 
       </div>
     </div>
