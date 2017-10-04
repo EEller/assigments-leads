@@ -1,200 +1,239 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<!-- META -->
-	<meta charset="utf-8">
-	<!-- Otimizar a exibição em dispositivos móveis -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!doctype html>
 
-	<title>8 reações na hora de pagar a conta</title>
+<!-- ESPECIFICANDO NOSSO MÓDULO ANGULAR listaContatos -->
+<html ng-app="gamaBlogApp">
+	<head>
+		<!-- META -->
+		<meta charset="utf-8">
+		<!-- Otimizar a exibição em dispositivos móveis -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src * 'unsafe-inline'; img-src * data:; script-src * 'unsafe-inline' 'unsafe-eval'">
 
-	<!-- CSS -->
-	<!-- Carregando o bootstrap-->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
+		<title>Moeda Inteligente</title>
+		<!-- CSS -->
+		<!-- Carregando o bootstrap-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="shortcut icon" href="images/favicon.png" />
+	</head>
 
-	<!-- JS -->
-	<!-- Carregando a biblioteca jQuery -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-	<!-- Carregando a biblioteca AngularJS -->
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>   
+	<!-- DEFINE O CONTROLLER E BUSCA TODOS OS CONTATOS -->
+	<body ng-controller="mainController">
 
-</head>
+		<!-- botão de compartilhamento de rede social -->
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.10&appId=257673200954409";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 
-<body>
-<div id="fb-root"></div>
-   <script>(function(d, s, id) {
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) return;
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.10&appId=257673200954409";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));</script>
-<!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="images/logo.png" class="logo float-left">
-      </a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fa fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sobre</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Materiais</a>
-          </li>
-          <li class="nav-item">
-            <!--
-                <input class="sb-search-input" placeholder="Enter your search term..." type="search" value="" name="search" id="search">
-                <input class="sb-search-submit" type="submit" value="">
-              -->
-              <span class="sb-icon-search"></span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">	
+			<div class="container">
+				<a class="navbar-brand" href="index.html"><img src="images/logo.png" class="logo float-left"></a>
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>					
+						<li class="nav-item"><a class="nav-link" href="#ler_posts">Posts</a></li>
+						<li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
+					</ul>
+					<!-- ainda vou ver se será um input ou uma luga 
+					<form class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+						<button class="btn btn-primary" type="submit">Search</button>
+					</form>		
+				-->
+				</div>	
+			</div>				
+		</nav>
 
-<!-- Page Header -->
-<header class="masthead" style="background-image: url('images/cabecalho2escuro.jpg')">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="post-heading">
-          <h1>8 reações na hora de pagar a conta</h1>
-          <h2 class="subheading">Muita gente ama comprar, mas a hora de pagar as vezes é um momento de tensão(ou desespero), abaixo listamos algumas reações na hora de comprar que muita gente já teve(ou terá) nessa vida: </h2>
-          <span class="meta">Postado por
-            <a href="#">Vic Moura</a>
-            em 02 de Outubro, 2017</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
+		<!-- Page Header -->
+		<header class="cabecalho">
+			<div class="cabecalho-info">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm- post-title">
+							<h1>8 reações na hora de pagar a conta</h1>						
+						</div>
+					</div>
+					<div class="post-description">
+						<div class="row">
+							<div class="col-sm-4 ">
+								<img src="images/Calendar.svg">
+								<span>02 de Outubro, 2017</span>
+							</div>
+							<div class="col-sm-4">
+								<img src="images/Person.svg">
+								<span>Vic Moura</span>
+							</div>
+							<div class="col-sm-4">
+								<img src="images/Tag.svg">
+								<span>Dicas de Finanças</span>
+							</div>
+						</div>
+					</div>				
+				</div>
+			</div>
+		</header>
 
-<!-- Post Content -->
-<article>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto" align="center">
-      <h2 class="section-heading">8 reações na hora de pagar a conta</h2>
-        <p>Muita gente ama comprar, mas a hora de pagar as vezes é um momento de tensão(ou desespero), abaixo listamos algumas reações na hora de comprar que muita gente já teve(ou terá) nessa vida:</p>
-       
-        <h2 class="section-heading">“500 reais? Mas eu só comprei 5 brusinhas, 2 calças, 1 bolsa e 1 vestido”</h2>
-       
-        <div align="center">
-        <img src="http://imguol.com.br/c/tvefamosos/gif/nazare.gif" class="img-thumbnail">
-        </div>
-       
-        <h2 class="section-heading">Aí o garçom traz a conta e você…</h2>
-        <blockquote class="blockquote">...esqueceu a carteira...</blockquote>
-        <div align="center">
-        	<img src="https://media.giphy.com/media/l2R07iUjuD76ZWKw8/giphy.gif" class="img-thumbnail">
-        </div>
+		<!-- Post Content -->
+		<article>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-md-10 mx-auto" align="center">
+					<h2 class="section-heading">8 reações na hora de pagar a conta</h2>
+						<p>Muita gente ama comprar, mas a hora de pagar as vezes é um momento de tensão(ou desespero), abaixo listamos algumas reações na hora de comprar que muita gente já teve(ou terá) nessa vida:</p>
+					 
+						<h2 class="section-heading">“500 reais? Mas eu só comprei 5 brusinhas, 2 calças, 1 bolsa e 1 vestido”</h2>
+					 
+						<div align="center">
+						<img src="http://imguol.com.br/c/tvefamosos/gif/nazare.gif" class="img-thumbnail">
+						</div>
+					 
+						<h2 class="section-heading">Aí o garçom traz a conta e você…</h2>
+						<blockquote class="blockquote">...esqueceu a carteira...</blockquote>
+						<div align="center">
+							<img src="https://media.giphy.com/media/l2R07iUjuD76ZWKw8/giphy.gif" class="img-thumbnail">
+						</div>
 
-        <blockquote class="blockquote">…mas acha ela naquele bolso que tinha esquecido que existia.</blockquote>
-        <div align="center">
-        	<img src="https://media.giphy.com/media/UDQpE7gUpU4j6/giphy.gif" class="img-thumbnail">
-        </div>
+						<blockquote class="blockquote">…mas acha ela naquele bolso que tinha esquecido que existia.</blockquote>
+						<div align="center">
+							<img src="https://media.giphy.com/media/UDQpE7gUpU4j6/giphy.gif" class="img-thumbnail">
+						</div>
 
-        <h2 class="section-heading">No encontro com o(a) crush, a conta chega e você fala “pode deixar que eu pago”</h2>
-        <div align="center">
-        	<img src="https://media.giphy.com/media/3oEdv6Q8TR7EAAZCkU/giphy.gif" class="img-thumbnail">
-        </div>
+						<h2 class="section-heading">No encontro com o(a) crush, a conta chega e você fala “pode deixar que eu pago”</h2>
+						<div align="center">
+							<img src="https://media.giphy.com/media/3oEdv6Q8TR7EAAZCkU/giphy.gif" class="img-thumbnail">
+						</div>
 
-        <h2 class="section-heading">Quando você vai pagar no cartão e…</h2>	
-        <blockquote class="blockquote">...“Processando…”</blockquote>
-        <div align="center">
-        	<img src="https://media.giphy.com/media/bEVKYB487Lqxy/giphy.gif" class="img-thumbnail">
-        </div>
+						<h2 class="section-heading">Quando você vai pagar no cartão e…</h2>	
+						<blockquote class="blockquote">...“Processando…”</blockquote>
+						<div align="center">
+							<img src="https://media.giphy.com/media/bEVKYB487Lqxy/giphy.gif" class="img-thumbnail">
+						</div>
 
-        <blockquote class="blockquote">...“Transação aprovada”</blockquote>
-        <div align="center">
-        	<img src="https://media.giphy.com/media/4PT6v3PQKG6Yg/giphy.gif" class="img-thumbnail">
-        </div>
+						<blockquote class="blockquote">...“Transação aprovada”</blockquote>
+						<div align="center">
+							<img src="https://media.giphy.com/media/4PT6v3PQKG6Yg/giphy.gif" class="img-thumbnail">
+						</div>
 
-        <blockquote class="blockquote">...você esquece a senha.</blockquote>
-        <div align="center">
-        	<img src="https://media.giphy.com/media/cGwd0fMXOee88/giphy.gif" class="img-thumbnail">
-        </div>
+						<blockquote class="blockquote">...você esquece a senha.</blockquote>
+						<div align="center">
+							<img src="https://media.giphy.com/media/cGwd0fMXOee88/giphy.gif" class="img-thumbnail">
+						</div>
 
-        <blockquote class="blockquote">...Ou o maior medo de todos…”Transação negada”</blockquote>
-        <div align="center">
-        	<img src="https://media.giphy.com/media/KupdfnqWwV7J6/giphy.gif" class="img-thumbnail">
-        </div>
+						<blockquote class="blockquote">...Ou o maior medo de todos…”Transação negada”</blockquote>
+						<div align="center">
+							<img src="https://media.giphy.com/media/KupdfnqWwV7J6/giphy.gif" class="img-thumbnail">
+						</div>
 
-        <p>Pra facilitar a vida de vocês e evitar alguns perrengues como os citados acima temos alguns materiais que podem ajudar vocês a terem um controle melhor da vida financeira. Você pode se inscrever abaixo ou <a href="index.html">aqui</a>, e vai receber esse e-book direto no seu e-mail.</p>
- 
-         <div class="fb-share-button" data-href="http://moedainteligente.com.br/post.html" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmoedainteligente.com.br%2Fpost.html&amp;src=sdkpreparse">Compartilhar</a></div>
+						<p>Pra facilitar a vida de vocês e evitar alguns perrengues como os citados acima temos alguns materiais que podem ajudar vocês a terem um controle melhor da vida financeira. Você pode se inscrever abaixo ou <a href="index.html">aqui</a>, e vai receber esse e-book direto no seu e-mail.</p>
+		 
+						 <div class="fb-share-button" data-href="http://moedainteligente.com.br/post.html" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmoedainteligente.com.br%2Fpost.html&amp;src=sdkpreparse">Compartilhar</a></div>
 
-      </div>
-    </div>
-  </div>
-</article>
+					</div>
+				</div>
+			</div>
+		</article>
 
-<hr>
+		<!-- Footer -->
+		<footer class="blog-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-3 col-sm-4 col-md-2">
+						<div class="logo-rodape">
+							<img src="images/logo-footer.svg" alt="Ver promoções" class="img-thumbnail icon-home">
+						</div>
+					</div>
+					<div class="col-4 col-sm-4 col-md-3">
+						<ul class="list">
+							<li>
+								<a href="index.html">Home</a>
+							</li>
+							<li>
+								<a href="#">Sobre</a>
+							</li>
+							<li>
+								<a href="#ler_posts">Posts</a>
+							</li>
+						</ul>                 
+					</div>
+					<div class="col-5 col-sm-4 col-md-3">
+						<ul class="list">
+							<li>
+								<a href="index.html">Contato</a>
+							</li>						
+						</ul>		
+						<ul class="redes-sociais">
+							<li>
+								<a href="#"><img src="images/facebook.svg"></a>
+							</li>
+							<li>
+								<a href="#"><img src="images/instagram.svg"></a>
+							</li>
+						</ul>    
+						
+					</div>
+					<div class="col-12 col-sm-12 col-md-4">
+						<h5>Quero Receber mais conteúdos</h5>
+						<form class="form" name="formLead" novalidate>          
+							<div class="form-group">
+								<input type="text" name="nome" id="nome" class="form-control" placeholder="Nome" ng-model="form.nome" required/>        
+							</div>
 
-<!-- Footer -->
-	<footer class="blog-footer">
-		<div class="container">
-		  <div class="row">
-		    <div class="col-md-2 ">
-		        <div class="service-item">
-		            <img src="images/logo-footer.png" alt="Ver promoções" class="img-thumbnail icon-home">
-		         </div>
-		    </div>
-		    <div class="col-md-2">
-		        <ul class="list">
-			        <li>
-			          <a href="#">Home</a>
-			        </li>
-			        <li>
-			          <a href="#">Sobre</a>
-			        </li>
-			        <li>
-			          <a href="#">Materiais</a>
-			        </li>
-			      </ul>                 
-		          </div>
-		          <div class="col-md-3">                  
-		                <ul class="list">
-		        <li>
-		          <a href="#">Busca</a>
-		        </li>
-		        <li>
-		          <a href="#">Entre em contato</a>
-		        </li>
-		        <li class="footer-item">
-		          <a href="#">Redes Sociais</a>
-		        </li>
-		      </ul>                 
-		          </div>
-		          <div class="col-md-4">
-		            <h5>Quero Receber mais conteúdos</h5>
-		              <form class="form">         
-		            <div class="form-group">
-		              <input type="text" id="nome" class="form-control" placeholder="Nome Completo" ng-model="form.nome"/>        
-		            </div>
+							<div class="form-group">
+								<input type="text" name="sobrenome" id="sobrenome" class="form-control" placeholder="Sobrenome" ng-model="form.sobrenome" required/>        
+							</div>
 
-		            <div class="form-group">
-		              <input type="text" id="email" class="form-control" placeholder="E-mail" ng-model="form.email"/>
-		            </div>    
-		          
-		            <button class="btn btn-primary" ng-click="criarContato()">Quero Receber!</button>
-		        </form>
-		          </div>
-		  </div>      
-		</div>
-	</footer>
-</body>
+							<div class="form-group">
+								<input type="email" name="email" id="email" class="form-control" placeholder="E-mail" ng-model="form.email" required/>
+							</div>    
 
+							<button class="btn btn-primary" ng-click="criarContato()">Quero Receber!</button>
+						</form> 
+					</div>
+				</div>      
+			</div>
+		</footer>
+
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+		<script>
+			!function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+				(A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+				r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+			}(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-107388958-1');
+			ga('send', 'pageview');
+		</script>
+
+		<!-- Hotjar Tracking Code for moedainteligente.com.br -->
+		<script>
+			(function(h,o,t,j,a,r){
+				h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+				h._hjSettings={hjid:644793,hjsv:5};
+				a=o.getElementsByTagName('head')[0];
+				r=o.createElement('script');r.async=1;
+				r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+				a.appendChild(r);
+			})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+		</script>
+		
+		<!-- JS -->
+		<!-- Carregando a biblioteca jQuery -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+		<!-- Carregando a biblioteca AngularJS -->
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script> 
+
+		<script src="angularApp.js"></script>
+	</body>
 </html>
