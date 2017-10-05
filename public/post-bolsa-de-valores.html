@@ -1,0 +1,231 @@
+<!doctype html>
+
+<!-- ESPECIFICANDO NOSSO MÓDULO ANGULAR listaContatos -->
+<html ng-app="gamaBlogApp">
+	<head>
+		<!-- META -->
+		<meta charset="utf-8">
+		<!-- Otimizar a exibição em dispositivos móveis -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src * 'unsafe-inline'; img-src * data:; script-src * 'unsafe-inline' 'unsafe-eval'">
+
+		<title>Moeda Inteligente</title>
+		<!-- CSS -->
+		<!-- Carregando o bootstrap-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="shortcut icon" href="images/favicon.png" />
+	</head>
+
+	<!-- DEFINE O CONTROLLER E BUSCA TODOS OS CONTATOS -->
+	<body ng-controller="mainController">
+
+		<!-- botão de compartilhamento de rede social -->
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.10&appId=257673200954409";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">	
+			<div class="container">
+				<a class="navbar-brand" href="index.html"><img src="images/logo.png" class="logo float-left"></a>
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>					
+						<li class="nav-item"><a class="nav-link" href="index.html#ler_posts">Posts</a></li>
+						<li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+					</ul>
+				</div>	
+			</div>				
+		</nav>
+
+		<!-- Page Header -->
+		<header class="cabecalho">
+			<div class="cabecalho-info">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm- post-title">
+							<h1>O que é e como funciona a bolsa de valores</h1>						
+						</div>
+					</div>
+					<div class="post-description">
+						<div class="row">
+							<div class="col-sm-4 ">
+								<img src="images/Calendar.svg">
+								<span>04 de Outubro, 2017</span>
+							</div>
+							<div class="col-sm-4">
+								<img src="images/Person.svg">
+								<span>Lucas Kenji</span>
+							</div>
+							<div class="col-sm-4">
+								<img src="images/Tag.svg">
+								<span>Dicas de Finanças</span>
+							</div>
+						</div>
+					</div>				
+				</div>
+			</div>
+		</header>
+
+		<!-- Post Content -->
+		<article>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-md-10 mx-auto">
+						<h2 class="section-heading">O que é e como funciona a bolsa de valores</h2>
+						<p>Se você nunca investiu na bolsa de valores, provavelmente se encaixa em uma dessas situações:
+						<ol> 
+        					<li>A grana tá curta.</li> 
+					        <li>Não sabe como funciona a bolsa de valores ou não tem conhecimento/experiência quando o assunto é investimento.</li> 
+					        <li>Tem medo de investir e perder muito dinheiro.</li> 
+   						</ol>
+   						</p>
+						<p>Se você se encaixa na primeira situação, o primeiro passo é fazer um esforço para sobrar um dinheiro no fim do mês. Então aí vai uma dica valiosa: se liga neste e-book que preparamos sobre algumas tecnologias que podem te ajudar a poupar e organizar sua vida financeira.</p>
+
+						<p>Caso você já tenha conseguido poupar um pouco e sabe que precisa fazer algo com o seu dinheiro, talvez se encaixe na situação 2 ou 3. Independente se te falta mais conhecimento sobre a bolsa de valores ou coragem para investir, este post foi escrito para você.</p>
+						
+						<div align="center">
+							<img src="images/bolsa-valores.jpg" class="img-thumbnail">
+						</div>
+						<p/>
+						<h2 class="section-heading">Afinal de contas, o que é bolsa de valores?</h2>
+
+						<p>De forma bem simples, é um mercado onde são negociados ações de empresas com capital aberto e outros produtos financeiros como opções (conversa para um outro momento, depois que você já estiver por dentro de ações).</p>
+
+						<p>Vale lembrar que estas ações podem ser de empresas públicas ou privadas. Então você consegue investir desde empresas como Magazine Luiza (MGLU3) até Petrobras (PETR4). E o que são essas letrinhas entre parênteses? Apenas a sigla da empresa utilizada na bolsa de valores.</p>
+
+						<h2 class="section-heading">Como funciona a bolsa de valores?</h2>
+
+						<p>A bolsa de valores tem a função de garantir que compradores e vendedores realizem transações de forma segura, eficiente e justa. Ela foi criada para isto. Digo isto não só para que todos saibam da importância da bolsa, mas também para que se sintam mais seguros em investir.</p>
+
+						<p>Se você já assistiu a uma das nossas indicações <a href="http://moedainteligente.com.br/post-4-filmes.html" target="_blank">sobre filmes pra te ajudar com finança</a> já viu um monte de gente gritando durante a compra e venda de ações. Mas não é assim que funciona a bolsa de valores. Felizmente, isto não existe mais, toda negociação é feita online.</p>
+
+						<p>As ordens de compra são enviadas ao computador central da Bolsa e as operações são realizadas de forma automática. Tudo muito simples e muito seguro. Vale a pena dar uma olhada no site da <a href="http://www.bmfbovespa.com.br/pt_br/" target="_blank">BMF&Bovespa</a>.</p>
+
+						<p>Mas antes de você começar a investir na Bolsa...</p>
+
+						<h2 class="section-heading">Mão na massa: comece a investir sem gastar dinheiro</h2>
+
+						<p>Tanto o <a href="http://folhainvest.folha.uol.com.br/" target="_blank">Folha Invest</a> quanto <a href="http://uolinvest.economia.uol.com.br/" target="_blank">UOL Invest</a> são simuladores que te ajudam a entender melhor como funciona a bolsa de valores. Não vou nem entrar em detalhes sobre qual deles é melhor: ambos são muito bons e bem fáceis de utilizar.</p>
+
+						<p>Nestes simuladores você se cadastra e recebe uma carteira padrão. Além disso, possui dinheiro fictício que pode ser usado para comprar ações (tudo de acordo com mercado real). Se uma ação valoriza no mundo real, também valoriza no simulador. Ou seja, você vai estar operando em um cenário real, sem perder dinheiro.</p>
+						
+						<div align="center">
+							<img src="images/uolinvest1.png" class="img-thumbnail">
+						</div>
+
+						<p>A imagem acima é um print de parte da minha carteira com o nome e a quantidade de ações que comprei e seus respectivos retornos. No retângulo em vermelho você consegue acompanhar o percentual de retorno que obteve.</p>
+
+						<p>Por hoje é só pessoal, cria lá sua conta em um dos simuladores: você não paga nada e pode fazer vários testes. E se você já está pronto para investir na bolsa, lembre-se de diversificar os investimentos (fazendo uma mescla com títulos de renda fixa, que você pode estudar com este e-book).</p>
+
+						<p>Fica ligado no blog para aprender mais sobre o mercado financeiro.</p>
+
+					</div>
+				</div>
+			</div>
+		</article>
+		
+		<!-- Footer -->
+		<footer class="blog-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-3 col-sm-4 col-md-2">
+						<div class="logo-rodape">
+							<img src="images/logo-footer.svg" alt="Ver promoções" class="img-thumbnail icon-home">
+						</div>
+					</div>
+					<div class="col-4 col-sm-4 col-md-3">
+						<ul class="list">
+							<li>
+								<a href="index.html">Home</a>
+							</li>
+							<li>
+								<a href="sobre.html">Sobre</a>
+							</li>
+							<li>
+								<a href="#ler_posts">Posts</a>
+							</li>
+						</ul>                 
+					</div>
+					<div class="col-5 col-sm-4 col-md-3">
+						<ul class="list">
+							<li>
+								<a href="index.html">Contato</a>
+							</li>						
+						</ul>		
+						<ul class="redes-sociais">
+							<li>
+								<a href="#"><img src="images/facebook.svg"></a>
+							</li>
+							<li>
+								<a href="#"><img src="images/instagram.svg"></a>
+							</li>
+						</ul>    
+						
+					</div>
+					<div class="col-12 col-sm-12 col-md-4">
+						<h5>Quero Receber mais conteúdos</h5>
+						<form class="form" name="formLead" novalidate>          
+							<div class="form-group">
+								<input type="text" name="nome" id="nome" class="form-control" placeholder="Nome" ng-model="form.nome" required/>        
+							</div>
+
+							<div class="form-group">
+								<input type="text" name="sobrenome" id="sobrenome" class="form-control" placeholder="Sobrenome" ng-model="form.sobrenome" required/>        
+							</div>
+
+							<div class="form-group">
+								<input type="email" name="email" id="email" class="form-control" placeholder="E-mail" ng-model="form.email" required/>
+							</div>    
+
+							<button class="btn btn-primary" ng-click="criarContato()">Quero Receber!</button>
+						</form> 
+					</div>
+				</div>      
+			</div>
+		</footer>
+
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+		<script>
+			!function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+				(A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+				r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+			}(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-107388958-1');
+			ga('send', 'pageview');
+		</script>
+
+		<!-- Hotjar Tracking Code for moedainteligente.com.br -->
+		<script>
+			(function(h,o,t,j,a,r){
+				h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+				h._hjSettings={hjid:644793,hjsv:5};
+				a=o.getElementsByTagName('head')[0];
+				r=o.createElement('script');r.async=1;
+				r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+				a.appendChild(r);
+			})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+		</script>
+		
+		<!-- JS -->
+		<!-- Carregando a biblioteca jQuery -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+		<!-- Carregando a biblioteca AngularJS -->
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script> 
+
+		<script src="angularApp.js"></script>
+	</body>
+</html>
