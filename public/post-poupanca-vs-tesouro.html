@@ -1,0 +1,225 @@
+<!doctype html>
+
+<!-- ESPECIFICANDO NOSSO MÓDULO ANGULAR listaContatos -->
+<html ng-app="gamaBlogApp">
+	<head>
+		<!-- META -->
+		<meta charset="utf-8">
+		<!-- Otimizar a exibição em dispositivos móveis -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src * 'unsafe-inline'; img-src * data:; script-src * 'unsafe-inline' 'unsafe-eval'">
+
+		<title>Moeda Inteligente</title>
+		<!-- CSS -->
+		<!-- Carregando o bootstrap-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="shortcut icon" href="images/favicon.png" />
+	</head>
+
+	<!-- DEFINE O CONTROLLER E BUSCA TODOS OS CONTATOS -->
+	<body ng-controller="mainController">
+
+		<!-- botão de compartilhamento de rede social -->
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.10&appId=257673200954409";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">	
+			<div class="container">
+				<a class="navbar-brand" href="index.html"><img src="images/logo.png" class="logo float-left"></a>
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>					
+						<li class="nav-item"><a class="nav-link" href="index.html#ler_posts">Posts</a></li>
+						<li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+					</ul>
+					<!-- ainda vou ver se será um input ou uma luga 
+					<form class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+						<button class="btn btn-primary" type="submit">Search</button>
+					</form>		
+				-->
+				</div>	
+			</div>				
+		</nav>
+
+		<!-- Page Header -->
+		<header class="cabecalho">
+			<div class="cabecalho-info">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm- post-title">
+							<h1>Poupança VS Tesouro</h1>						
+						</div>
+					</div>
+					<div class="post-description">
+						<div class="row">
+							<div class="col-sm-4 ">
+								<img src="images/Calendar.svg">
+								<span>05 de Outubro, 2017</span>
+							</div>
+							<div class="col-sm-4">
+								<img src="images/Person.svg">
+								<span>Diego Cena</span>
+							</div>
+							<div class="col-sm-4">
+								<img src="images/Tag.svg">
+								<span>Dicas de Finanças</span>
+							</div>
+						</div>
+					</div>				
+				</div>
+			</div>
+		</header>
+
+		<!-- Post Content -->
+		<article>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-md-10 mx-auto">
+						<h2 class="section-heading">Poupança VS Tesouro</h2>
+						<p>Muitas pessoas pensam que investir na poupança é uma forma rentável e
+						melhor do que o tesouro direto pelo simples fato dá isenção do imposto de
+						renda. Com esse texto vamos mostrar que você pode ter um retorno mais
+						rentável e de maneira simples utilizando o tesouro direto.
+						</p>
+
+						<p>Mas antes de começarmos o que é Tesouro Direto? O que é poupança? Quais os rendimentos?</p>
+
+						<h2 class="section-heading">Tesouro Direto</h2>
+
+						<p>São títulos públicos que estão em negociação no mercado para o governo arrecadar um valor (R$).</p>
+
+						<h2 class="section-heading">Poupança</h2>
+
+						<p>É o investimento mais simples e menos rentável que existe no mercado, você guarda o dinheiro em um banco e ao longo do mês esse dinheiro te dará um retorno.</p>
+
+						<h2 class="section-heading">Rendimentos</h2>
+
+						<p>Tesouro Taxa: 9,58 a.a ou 0,80 ao mês</p>
+
+						<p>Poupança: 0,46 % ao mês + Taxa Referencial</p>
+
+						<p>Para investir no tesouro você pode abrir uma conta em um banco, corretora de valores ou investir pelo site. Alguns bancos e corretoras não cobram taxa de administração (taxa que os bancos cobram para investir seu dinheiro), para investir na poupança você também precisa abrir uma conta em um banco.</p>
+
+						<p>Mesmo com a cobrança do imposto de renda é mais rentável investir no tesouro vemos um exemplo:</p>
+
+						<ul>
+							<li>Exemplo Poupança: R$ 5000,00 em três meses rende aproximadamente R$69,32</li>
+							<li>Exemplo tesouro: R$ 5000,00 em três meses rende aproximadamente R$89,65</li>
+						</ul>
+
+						<p>Para investir no tesouro tem três opções, Tesouro Selic, Tesouro IPCA e Tesouro Prefixado, onde as taxas variam e você deve escolher qual melhor entre eles. Em relação a quantidade de dinheiro a poupança não tem valor mínimo para investimento, ou seja, você guarda a quantidade que você quiser. Já no tesouro o valor mínimo de um título é R$30 reais.</p>
+
+						<p>Nesse blog vamos continuar falando sobre investimentos. Conto com vocês.</p>
+
+					</div>
+				</div>
+			</div>
+		</article>
+		
+		<!-- Footer -->
+		<footer class="blog-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-3 col-sm-4 col-md-2">
+						<div class="logo-rodape">
+							<img src="images/logo-footer.svg" alt="Ver promoções" class="img-thumbnail icon-home">
+						</div>
+					</div>
+					<div class="col-4 col-sm-4 col-md-3">
+						<ul class="list">
+							<li>
+								<a href="index.html">Home</a>
+							</li>
+							<li>
+								<a href="sobre.html">Sobre</a>
+							</li>
+							<li>
+								<a href="#ler_posts">Posts</a>
+							</li>
+						</ul>                 
+					</div>
+					<div class="col-5 col-sm-4 col-md-3">
+						<ul class="list">
+							<li>
+								<a href="index.html">Contato</a>
+							</li>						
+						</ul>		
+						<ul class="redes-sociais">
+							<li>
+								<a href="#"><img src="images/facebook.svg"></a>
+							</li>
+							<li>
+								<a href="#"><img src="images/instagram.svg"></a>
+							</li>
+						</ul>    
+						
+					</div>
+					<div class="col-12 col-sm-12 col-md-4">
+						<h5>Quero Receber mais conteúdos</h5>
+						<form class="form" name="formLead" novalidate>          
+							<div class="form-group">
+								<input type="text" name="nome" id="nome" class="form-control" placeholder="Nome" ng-model="form.nome" required/>        
+							</div>
+
+							<div class="form-group">
+								<input type="text" name="sobrenome" id="sobrenome" class="form-control" placeholder="Sobrenome" ng-model="form.sobrenome" required/>        
+							</div>
+
+							<div class="form-group">
+								<input type="email" name="email" id="email" class="form-control" placeholder="E-mail" ng-model="form.email" required/>
+							</div>    
+
+							<button class="btn btn-primary" ng-click="criarContato()">Quero Receber!</button>
+						</form> 
+					</div>
+				</div>      
+			</div>
+		</footer>
+
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+		<script>
+			!function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+				(A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+				r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+			}(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-107388958-1');
+			ga('send', 'pageview');
+		</script>
+
+		<!-- Hotjar Tracking Code for moedainteligente.com.br -->
+		<script>
+			(function(h,o,t,j,a,r){
+				h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+				h._hjSettings={hjid:644793,hjsv:5};
+				a=o.getElementsByTagName('head')[0];
+				r=o.createElement('script');r.async=1;
+				r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+				a.appendChild(r);
+			})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+		</script>
+		
+		<!-- JS -->
+		<!-- Carregando a biblioteca jQuery -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+		<!-- Carregando a biblioteca AngularJS -->
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script> 
+
+		<script src="angularApp.js"></script>
+	</body>
+</html>
