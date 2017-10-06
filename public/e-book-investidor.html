@@ -50,6 +50,17 @@
 			p {
 				margin-bottom: 1.5em;
 			}
+
+			#icon{
+				background-image: url('images/Check.svg');
+				background-repeat: no-repeat;
+				list-style-type: none;
+				height: 30px;
+			}
+
+			#icon strong{
+				margin-left: 40px;
+			}
 		</style>
 		<!-- CSS -->
 		<!-- Carregando o bootstrap-->
@@ -60,14 +71,14 @@
 	<!-- DEFINE O CONTROLLER E BUSCA TODOS OS CONTATOS -->
 	<body ng-controller="mainController">
 		<!-- Navigation -->
-		<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">	
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav" style="background-color: rgba(0,0,0,0) !important">	
 			<div class="container">
 				<a class="navbar-brand" href="index.html"><img src="images/logo.png" class="logo float-left"></a>
 			</div>				
 		</nav>
 
 		<!-- Page Header --> 
-		<header class="cabecalho" style="background: none !important	">
+		<header class="cabecalho" style="background: none !important">
 			<div class="cabecalho-info">
 				<div class="container">
 					<div class="row">
@@ -75,17 +86,19 @@
 							<div class="cabecalho-info-esquerda">
 								<h1>Guia de bolso para investidor iniciante.</h1>
 								<h4>Você Sabe que o dinheiro parado não é bom negócio. Criamos um e-book para te ajudar a entender um pouco mais sobre investimentos e o que fazer com o seu dinheiro.</h4>
-								<ul class="navbar-nav ml-auto">
-									<li><strong>Quais as possibilidades de investimentos para iniciantes</strong></li>
-									<li><strong>Renda fixa vs renda variável</strong></li>
-									<li><strong>Principais títulos privados e públicos (Tesouro Direto)</strong></li>
+								<ul class="navbar-nav ml-auto" id="teste">
+									<li id="icon"><strong>Quais as possibilidades de investimentos para iniciantes</strong></li>
+									<li id="icon"><strong>Renda fixa vs renda variável</strong></li>
+									<li id="icon"><strong>Principais títulos privados e públicos (Tesouro Direto)</strong></li>
 								</ul>
+								<br>
+								<a href="http://moedainteligente.com.br" class="btn btn-info" role="button" style="color: white; border-color: #fb9323; background-color: #fb9323; margin-left: 30%;">Voltar para o blog</a>
 							</div>
 						</div>
 						<div class="col- col-sm- col-lg-4">
 							<div class="cabecalho-info-direita">
 								<div class="text-center">
-									<img src="images/capaEbook.png" class="rounded">
+									<img src="images/capaEbook2.png" class="rounded">
 									<br>
 									<strong class="descriptionEbook"> Baixe agora! Será sua primeira economia, é 100% gratuito!</strong>
 									<form class="form" name="formLead" novalidate>          
@@ -100,7 +113,7 @@
 										<div class="form-group">
 											<input type="email" name="email" id="email" class="form-control" placeholder="E-mail" ng-model="form.email" required/>
 										</div>
-										<button class="btn btn-primary" ng-click="criarContato()">Quero Receber!</button>
+										<button class="btn btn-primary" ng-click="criarContato(2)">Quero Receber!</button>
 									</form>   
 								</div>  
 							</div>  

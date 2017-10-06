@@ -9,7 +9,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file:; style-src * 'unsafe-inline'; img-src * data:; script-src * 'unsafe-inline' 'unsafe-eval'">
 
-		<title>Moeda Inteligente</title>
+		<title>Poupança VS Tesouro</title>
 		<!-- CSS -->
 		<!-- Carregando o bootstrap-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
@@ -19,6 +19,16 @@
 
 	<!-- DEFINE O CONTROLLER E BUSCA TODOS OS CONTATOS -->
 	<body ng-controller="mainController">
+
+		<!-- botão de compartilhamento de rede social -->
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.10&appId=257673200954409";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
 
 		<!-- botão de compartilhamento de rede social -->
 		<div id="fb-root"></div>
